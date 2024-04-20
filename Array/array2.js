@@ -37,6 +37,11 @@ while (index < array.length) {
     index++;
 }
 
+//using map ():
+console.log('using map method');
+let arrays = array.map(function(item){
+    console.log(item)
+})
 // -----------------------------------------------------------------------
 // ● WAP to print the odd indexed elements from the given array
 console.log('----------------------------------------------------------------------');
@@ -113,18 +118,41 @@ console.log(reverseArray);
 // ● From the given array find the last element using length property
 console.log('----------------------------------------------------------------------');
 console.log('From the given array find the last element using length property');
+// array = [4, 23, 11, 3, 5, 6, 1]
+
+const lastElement = array.length - 1;
+console.log(array[lastElement]); 
 // -----------------------------------------------------------------------
 // ● From the given array find the 3rd last element
 console.log('----------------------------------------------------------------------');
 console.log('From the given array find the 3rd last element');
+// array = [4, 23, 11, 3, 5, 6, 1]
+
+const thirdLastEle = array.length-3;
+console.log(array[thirdLastEle]);
+
 // -----------------------------------------------------------------------
 // ● How to insert element at the beginning of the array
 console.log('----------------------------------------------------------------------');
 console.log('How to insert element at the beginning of the array');
+
+//using unshift method:
+console.log('using unshift method');
+const insertele = array.unshift(17);
+console.log(array);
+
+// using spread operator:
+console.log(' using spread operator:');
+const addElem = [28, ...array];
+console.log(addElem);
+
 // -----------------------------------------------------------------------
 // ● How to replace middle element from the array
 console.log('----------------------------------------------------------------------');
 console.log('How to replace middle element from the array');
+// array =[17, 4, 23, 11, 3, 5, 6, 1];
+ const middleEle = array.splice()
+
 // -----------------------------------------------------------------------
 // ● How to add element 2 at the end of the array
 console.log('----------------------------------------------------------------------');

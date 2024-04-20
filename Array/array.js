@@ -53,6 +53,7 @@ console.log(array1);
 // Q..WAP to find the even positioned value ?
 console.log(`-----------------------------------------------------------------------`);
 console.log(`Q..WAP to find the even positioned value ?`);
+// arrayFruits = ["Banana", "Orange", "Apple", "Mango", “Water Melon”];
 
 function evenPositionedValue(numbers) {
     
@@ -64,3 +65,6 @@ function evenPositionedValue(numbers) {
 }
 const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 console.log(evenPositionedValue(numbers));
+
+
+// Q. reverse const arrayFruits = ["Banana", "Orange", "Apple", "Mango", “Water Melon”];
