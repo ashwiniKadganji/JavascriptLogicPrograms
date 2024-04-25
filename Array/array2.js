@@ -151,25 +151,107 @@ console.log(addElem);
 console.log('----------------------------------------------------------------------');
 console.log('How to replace middle element from the array');
 // array =[17, 4, 23, 11, 3, 5, 6, 1];
- const middleEle = array.splice()
+
+function middleValueReplace(array,newValue){
+    let len = array.length;
+// Calculate the index of the middle element
+   let middleIndex = Math.floor(len/2)
+
+//    //using splice method:
+//    let newArray = array.splice(middleIndex,1, newValue);
+//or
+// using spread Create a new array with the middle element replaced by the new value
+
+  let newArray = [...array.slice(0,middleIndex),newValue,...array.slice(middleIndex+1)];
+
+   return newArray;
+}
+console.log(`new array after replacing middle value `,middleValueReplace([6,7,8,9,0,1,11,12,13,14],143));
 
 // -----------------------------------------------------------------------
 // ● How to add element 2 at the end of the array
 console.log('----------------------------------------------------------------------');
 console.log('How to add element 2 at the end of the array');
+
+let newArray = array.push(2);
+console.log('add 2 at the end of the array :',array);
 // -----------------------------------------------------------------------
 // ● How to replace last element with element 9
 console.log('----------------------------------------------------------------------');
 console.log('How to replace last element with element 9');
+
+let replaceNum = array.splice(array.length-1,1,9);
+console.log(array);
 // -----------------------------------------------------------------------
 // ● WAP to find element 5 from the given array
 console.log('----------------------------------------------------------------------');
 console.log('WAP to find element 5 from the given array');
+
+// using indexOf method:
+
+function findEle(array,num){
+    return array.indexOf(num);
+}
+console.log(` The position is: `,findEle([12,2,3,5,4,6,7],5));
+
+//using for loop
+
+function findElement(array,num){
+    for (let i = 0; i < array.length; i++) {
+       if (  array[i] === num) {
+        return i;
+       }
+    }
+    return -1
+}
+console.log(findElement([1,2,3,4,5],6));
+console.log(findElement([1,2,3,4,5],5));
+
+//using findIndex method:
+
+function findNum(array,num){
+    return array.findIndex(item => item === num);
+}
+console.log(findNum([17,28,7,2,99,4],5));
+console.log(findNum([17,28,7,2,99,4],28));
+
+
 // -----------------------------------------------------------------------
 // ● How to remove last element from the array
 console.log('----------------------------------------------------------------------');
 console.log('How to remove last element from the array');
+
+console.log(array);
+array.pop();
+console.log(array);
 // -----------------------------------------------------------------------
 // ● Clone the array ? How we can perform the deep clone ?
 console.log('----------------------------------------------------------------------');
 console.log('Clone the array ? How we can perform the deep clone ?');
+
+// using spread operator
+let newarray = [...array];
+console.log(newarray); 
+
+// using slice method
+function deepClone(arr) {
+    return arr.slice(0);
+  }
+  
+  // Example usage:
+  let originalArray = [1, [2, 3], { a: 4 }];
+  let clonedArray = deepClone(originalArray);
+  console.log("Original array:", originalArray);
+  console.log("Cloned array:", clonedArray);
+
+  // Using JSON.parse() and JSON.stringify()
+
+  function deepClone(arr) {
+    return JSON.parse(JSON.stringify(arr));
+  }
+  
+  // Example usage:
+  let originalArray1 = [1, [2, 3], { a: 4 }];
+  let clonedArray1 = deepClone(originalArray1);
+  console.log("Original array:", originalArray1);
+  console.log("Cloned array:", clonedArray1);

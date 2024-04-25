@@ -57,14 +57,43 @@ console.log(`Q..WAP to find the even positioned value ?`);
 
 function evenPositionedValue(numbers) {
     
-    let evenpisotioned = [];
-  for (let index = 1; index < numbers.length; index += 2) {
-         evenpisotioned.push(numbers[index]);
+    let evenpositioned = [];
+  for (let index = 0; index < numbers.length; index += 2) {
+         evenpositioned.push(numbers[index]);
   }
-  return evenpisotioned;
+  return evenpositioned;
 }
 const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 console.log(evenPositionedValue(numbers));
 
 
+console.log('-----------------------------------------------');
+
+function EvenPositionedFruits(arrayFruits1){
+    
+  let evenFruit=[];
+  for (let i = 0; i < arrayFruits1.length; i += 2) {
+        evenFruit.push(arrayFruits1[i]); 
+  }
+  return evenFruit;
+
+}
+
+const arrayFruits1 = ["Banana", "Orange", "Apple", "Mango", "WaterMelon"];
+
+console.log(EvenPositionedFruits(arrayFruits1));
+
 // Q. reverse const arrayFruits = ["Banana", "Orange", "Apple", "Mango", “Water Melon”];
+
+console.log('reverse the array is arrayFruits');
+
+function reverseArray(fruits){
+  
+  let newData = [];
+  for (let index = fruits.length; index >= 0; index--) {
+     newData.push(fruits[index]);
+  }
+  return newData
+}
+const fruits = ['mango','papaya','strwaberry','banana'];
+console.log(reverseArray(fruits));
